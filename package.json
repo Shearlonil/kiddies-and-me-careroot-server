@@ -1,0 +1,29 @@
+{
+  "name": "kiddies-and-me-careroot-server",
+  "version": "1.0.0",
+  "description": "kiddies and me careroot server application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shearlonil/kiddies-and-me-careroot-server.git"
+  },
+  "keywords": [
+    "kids",
+    "pregnant",
+    "mothers",
+    "foundation",
+    "helping",
+    "children",
+    "helping",
+    "mothers"
+  ],
+  "author": "Bora",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shearlonil/kiddies-and-me-careroot-server/issues"
+  },
+  "homepage": "https://github.com/Shearlonil/kiddies-and-me-careroot-server#readme"
+}
