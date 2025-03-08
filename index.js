@@ -13,32 +13,31 @@ const credentials = require('./middleware/credentials');
 
 db.connect();
 
-const PORT = process.env.PORT || 2024;
+const PORT = process.env.PORT || 2025;
 
-// Handle options credentials check - before CORS! and fetch cookies credentials requirement
+//  Handle options credentials check - before CORS! and fetch cookies credentials requirement
 app.use(credentials);
 
 // CROSS ORIGIN RESOURCE SHARING
 app.use(cors(corsOptions));
 
-// built-in middleware to handle urlencoded data aka form-data
-// 'content-type' application/x-www-form-urlencoded
+//  built-in middleware to handle urlencoded data aka form-data
+//  'content-type' application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended : true }));
 
-// built-in middleware for application/json
+//  built-in middleware for application/json
 app.use(express.json());
 
-// for cookies
+//  for cookies
 app.use(cookieParser());
 
-// setup default admin account
-// setUp();
+//  setup default admin account
+//  setUp();
 
-// ROUTES
+//  ROUTES
 app.use('/auth', require('./controllers/authentication-controller'));
 app.use('/staff', require('./controllers/staff-controller'));
-app.use('/parent', require('./controllers/parent-controller'));
-app.use('/applicant', require('./controllers/applicant-controller'));
+app.use('/registrant', require('./controllers/registrant-controller'));
 app.use('/gallery', require('./controllers/gallery-controller'));
 app.use('/dashboard', require('./controllers/staff-controller'));
 

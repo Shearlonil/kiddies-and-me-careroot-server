@@ -1,6 +1,6 @@
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize('kiddies', 'bora', 'Action@1837', {
+const sequelize = new Sequelize('careroot_foundation', 'bora', 'Action@1837', {
     host: 'localhost',
     dialect: 'mysql'
 });
@@ -16,8 +16,7 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.imgs = require('../entities/img')(sequelize, Sequelize);
-db.applicant = require('../entities/applicant')(sequelize, Sequelize);
-db.parent = require('../entities/parent')(sequelize, Sequelize);
+db.registrant = require('../entities/registrant')(sequelize, Sequelize);
 db.staff = require('../entities/staff')(sequelize, Sequelize);
 
 db.connect = async () => {
