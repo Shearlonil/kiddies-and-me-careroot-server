@@ -1,14 +1,14 @@
 const { Sequelize } = require('sequelize');
 
-// const sequelize = new Sequelize('careroot', 'bora', 'Action@1837', {
-//     host: 'localhost',
-//     dialect: 'mysql'
-// });
-
-const sequelize = new Sequelize('rootlntg_kiddies_and_me_careroot_cic', 'rootlntg_kiddies_and_me', 'uo(PY!JQh@YS', {
+const sequelize = new Sequelize('careroot', 'bora', 'Action@1837', {
     host: 'localhost',
     dialect: 'mysql'
 });
+
+// const sequelize = new Sequelize('rootlntg_kiddies_and_me_careroot_cic', 'rootlntg_kiddies_and_me', 'uo(PY!JQh@YS', {
+//     host: 'localhost',
+//     dialect: 'mysql'
+// });
 
 const db = {};
 
