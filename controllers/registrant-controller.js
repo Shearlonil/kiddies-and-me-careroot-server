@@ -9,9 +9,9 @@ const validate = require('../middleware/schemer-validator');
 const { verifyAccessToken } = require('../middleware/jwt');
 const multerCVUpload = require('../utils/multer-cv-upload');
 const registrantService = require('../api-services/registrant-service');
-const { schema } = require('../yup-schemas/registration-schema');
-const searchSchema = require('../yup-schemas/search-schema');
-const { routePositiveNumberMiscParamSchema } = require('../yup-schemas/request-params');
+const { schema } = require('../schema/yup-schemas/registration-schema');
+const searchSchema = require('../schema/yup-schemas/search-schema');
+const { routePositiveNumberMiscParamSchema } = require('../schema/yup-schemas/request-params');
 
 const findAll = async (req, res) => {
     try {

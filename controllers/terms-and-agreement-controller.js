@@ -3,7 +3,7 @@ const router = express.Router();
 
 const { authorities } = require('../utils/default-entries');
 const termsAndAgreementService = require('../api-services/terms-and-agreement-service');
-const quillSchema = require('../json-schema/quill-schema');
+const quillSchema = require('../schema/json-schema/quill-schema');
 const { verifyAccessToken } = require('../middleware/jwt');
 const preAuthorize = require('../middleware/verify-authorities');
 

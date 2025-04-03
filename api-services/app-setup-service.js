@@ -1,7 +1,6 @@
 const db = require('../config/db-config');
 const bcrypt = require('bcryptjs');
 
-const Img = db.imgs;
 const Staff = db.staff;
 
 const setUp = async () => {

@@ -18,6 +18,7 @@ db.sequelize = sequelize;
 db.imgs = require('../entities/img')(sequelize, Sequelize);
 db.registrant = require('../entities/registrant')(sequelize, Sequelize);
 db.staff = require('../entities/staff')(sequelize, Sequelize);
+db.event = require('../entities/events')(sequelize, Sequelize);
 
 db.connect = async () => {
     try {

@@ -9,7 +9,7 @@ const sharp = require("sharp");
 const multerImgUpload = require('../utils/multer-img-upload');
 const galleryService = require('../api-services/gallery-service');
 const { verifyAccessToken } = require('../middleware/jwt');
-const { routePositiveNumberMiscParamSchema } = require('../yup-schemas/request-params');
+const { routePositiveNumberMiscParamSchema } = require('../schema/yup-schemas/request-params');
 
 const uploadIMG = async (req, res) => {
     if(!req.file){

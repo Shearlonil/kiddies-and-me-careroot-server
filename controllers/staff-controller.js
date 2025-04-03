@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 
-const { routePasswordParamSchema } = require('../yup-schemas/request-params');
+const { routePasswordParamSchema } = require('../schema/yup-schemas/request-params');
 const staffService = require('../api-services/staff-service');
 const { verifyAccessToken } = require('../middleware/jwt');
 

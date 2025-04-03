@@ -6,7 +6,7 @@ const staffService = require('../api-services/staff-service');
 const { createRefreshToken, logout, createStaffAccessToken, createOTPtoken, handleRefresh } = require('../middleware/jwt');
 const nodemailer = require("nodemailer");
 const generateOTP = require('../utils/otp-generator');
-const { routeEmailParamSchema, routePasswordParamSchema } = require('../yup-schemas/request-params');
+const { routeEmailParamSchema, routePasswordParamSchema } = require('../schema/yup-schemas/request-params');
 
 const login = async (req, res) => {
     const { email, pw } = req.body;
