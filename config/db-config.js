@@ -19,6 +19,22 @@ db.imgs = require('../entities/img')(sequelize, Sequelize);
 db.registrant = require('../entities/registrant')(sequelize, Sequelize);
 db.staff = require('../entities/staff')(sequelize, Sequelize);
 db.event = require('../entities/events')(sequelize, Sequelize);
+db.eventDates = require('../entities/event-dates')(sequelize, Sequelize);
+
+// Association between event and event-dates
+db.event.hasMany(db.eventDates, {
+  foreignKey: {
+    name: 'event_id',
+    allowNull: false
+  },
+  onDelete: 'CASCADE',
+});
+db.eventDates.belongsTo(db.event, {
+  foreignKey: {
+    name: 'event_id',
+    allowNull: false
+  }
+});
 
 db.connect = async () => {
     try {
