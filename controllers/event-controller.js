@@ -15,11 +15,16 @@ const create = async (req, res) => {
     }
 };
 
+const upcoming = async (req, res) => {
+    res.status(200).json(await eventService.upcoming());
+};
+
 const recentEvents = async (req, res) => {
     res.status(200).json(await eventService.recent());
 };
 
 router.route('/create').post( verifyAccessToken, validate(schema), create );
+router.route('/upcoming').get( upcoming );
 router.route('/recent').get( recentEvents );
 
 module.exports = router;

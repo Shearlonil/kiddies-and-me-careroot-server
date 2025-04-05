@@ -46,8 +46,22 @@ const recent = async (pageSize) => {
     }); 
 }
 
+const upcoming = async (pageSize) => {
+    //  get last five events posted
+    return await Event.findAll({
+        where: { mark_done: 0 },
+        include: [
+            {
+                model: EventDates,
+            },
+        ],
+        order: [ [ 'createdAt', 'DESC' ]]
+    }); 
+}
+
 module.exports = {
     findById,
     create,
     recent,
+    upcoming,
 };
